@@ -15,7 +15,7 @@ public class indexController {
 
     public String index(@RequestParam int maxNumber, Model model){
         Random random = new Random();
-        int randomNumber = random.nextInt(1, 6);
+        int randomNumber = random.nextInt(1, maxNumber);
         model.addAttribute("randomNumber", randomNumber);
         return "index";
     }
